@@ -22,13 +22,13 @@ class RPS
 
   def welcome_message
     puts ""
-    puts "Welcome to rock, paper, scissors!"
+    puts "Bem-vindo ao Rock, Paper e Scissors!"
     puts ""
   end
 
   def prompt_user_input
     puts ""
-    puts "Choose your weapon, Player #{@current_player.pid}: Rock ('R'), Paper ('P') or Scissors ('S'). Type 'Q' to quit."
+    puts "Escolha sua arma, Jogador #{@current_player.pid}: Rock ('R')\nPaper ('P')\nScissors ('S')\nEscolha 'Q' para sair."
     @current_player.choice = gets.chomp.upcase
     validate_input
   end
@@ -38,7 +38,7 @@ class RPS
       exit
     elsif !["R","P","S"].include?( @current_player.choice )
       puts ""
-      puts "Please enter a valid choice!"
+      puts "Por favor, insira uma escolha válida!"
       @valid_input = false
     else
       if @players == 2
